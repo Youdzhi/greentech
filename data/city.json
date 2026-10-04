@@ -1,0 +1,60 @@
+{
+  "name": "LeSauveur Demo City",
+  "generators": [
+    {"id": "g1", "name": "North Solar Park", "x": 12, "y": 18, "capacity_mw": 220, "current_output_mw": 0, "operational": true},
+    {"id": "g2", "name": "River Hydro", "x": 82, "y": 14, "capacity_mw": 260, "current_output_mw": 0, "operational": true},
+    {"id": "g3", "name": "East Wind Farm", "x": 88, "y": 82, "capacity_mw": 180, "current_output_mw": 0, "operational": true}
+  ],
+  "substations": [
+    {"id": "s1", "name": "Substation 01", "x": 28, "y": 25, "max_capacity_mw": 110},
+    {"id": "s2", "name": "Substation 02", "x": 50, "y": 22, "max_capacity_mw": 125},
+    {"id": "s3", "name": "Substation 03", "x": 72, "y": 28, "max_capacity_mw": 115},
+    {"id": "s4", "name": "Substation 04", "x": 40, "y": 48, "max_capacity_mw": 120},
+    {"id": "s5", "name": "Substation 05", "x": 63, "y": 48, "max_capacity_mw": 105},
+    {"id": "s6", "name": "Substation 06", "x": 25, "y": 72, "max_capacity_mw": 100},
+    {"id": "s7", "name": "Substation 07", "x": 50, "y": 76, "max_capacity_mw": 115},
+    {"id": "s8", "name": "Substation 08", "x": 75, "y": 70, "max_capacity_mw": 105}
+  ],
+  "consumers": [
+    {"id": "c1", "name": "Hospital 01", "x": 34, "y": 34, "base_demand_mw": 26, "priority": "CRITICAL"},
+    {"id": "c2", "name": "Water Pump 03", "x": 57, "y": 34, "base_demand_mw": 20, "priority": "CRITICAL"},
+    {"id": "c3", "name": "Airport", "x": 84, "y": 45, "base_demand_mw": 32, "priority": "HIGH"},
+    {"id": "c4", "name": "Industrial District", "x": 72, "y": 88, "base_demand_mw": 72, "priority": "HIGH"},
+    {"id": "c5", "name": "Residential North", "x": 18, "y": 40, "base_demand_mw": 38, "priority": "NORMAL"},
+    {"id": "c6", "name": "Residential Central", "x": 47, "y": 38, "base_demand_mw": 42, "priority": "NORMAL"},
+    {"id": "c7", "name": "Residential South", "x": 42, "y": 90, "base_demand_mw": 34, "priority": "NORMAL"},
+    {"id": "c8", "name": "Commercial Core", "x": 59, "y": 60, "base_demand_mw": 52, "priority": "NORMAL"},
+    {"id": "c9", "name": "Public Infrastructure", "x": 88, "y": 62, "base_demand_mw": 24, "priority": "HIGH"},
+    {"id": "c10", "name": "Residential East", "x": 92, "y": 92, "base_demand_mw": 30, "priority": "NORMAL"}
+  ],
+  "power_lines": [
+    {"id": "l1", "from_node": "g1", "to_node": "s1", "max_capacity_mw": 140, "length_km": 8},
+    {"id": "l2", "from_node": "g1", "to_node": "s2", "max_capacity_mw": 140, "length_km": 12},
+    {"id": "l3", "from_node": "g2", "to_node": "s2", "max_capacity_mw": 160, "length_km": 10},
+    {"id": "l4", "from_node": "g2", "to_node": "s3", "max_capacity_mw": 150, "length_km": 8},
+    {"id": "l5", "from_node": "g3", "to_node": "s8", "max_capacity_mw": 130, "length_km": 9},
+    {"id": "l6", "from_node": "s1", "to_node": "s2", "max_capacity_mw": 85, "length_km": 7},
+    {"id": "l7", "from_node": "s2", "to_node": "s3", "max_capacity_mw": 90, "length_km": 9},
+    {"id": "l8", "from_node": "s1", "to_node": "s4", "max_capacity_mw": 95, "length_km": 10},
+    {"id": "l9", "from_node": "s2", "to_node": "s4", "max_capacity_mw": 100, "length_km": 8},
+    {"id": "l10", "from_node": "s2", "to_node": "s5", "max_capacity_mw": 95, "length_km": 9},
+    {"id": "l11", "from_node": "s3", "to_node": "s5", "max_capacity_mw": 90, "length_km": 8},
+    {"id": "l12", "from_node": "s4", "to_node": "s5", "max_capacity_mw": 80, "length_km": 8},
+    {"id": "l13", "from_node": "s4", "to_node": "s6", "max_capacity_mw": 80, "length_km": 10},
+    {"id": "l14", "from_node": "s4", "to_node": "s7", "max_capacity_mw": 90, "length_km": 12},
+    {"id": "l15", "from_node": "s5", "to_node": "s7", "max_capacity_mw": 85, "length_km": 10},
+    {"id": "l16", "from_node": "s5", "to_node": "s8", "max_capacity_mw": 80, "length_km": 11},
+    {"id": "l17", "from_node": "s6", "to_node": "s7", "max_capacity_mw": 70, "length_km": 9},
+    {"id": "l18", "from_node": "s7", "to_node": "s8", "max_capacity_mw": 75, "length_km": 10},
+    {"id": "l19", "from_node": "s1", "to_node": "c1", "max_capacity_mw": 60, "length_km": 4},
+    {"id": "l20", "from_node": "s2", "to_node": "c2", "max_capacity_mw": 60, "length_km": 5},
+    {"id": "l21", "from_node": "s3", "to_node": "c3", "max_capacity_mw": 60, "length_km": 5},
+    {"id": "l22", "from_node": "s8", "to_node": "c4", "max_capacity_mw": 80, "length_km": 7},
+    {"id": "l23", "from_node": "s1", "to_node": "c5", "max_capacity_mw": 60, "length_km": 5},
+    {"id": "l24", "from_node": "s4", "to_node": "c6", "max_capacity_mw": 65, "length_km": 5},
+    {"id": "l25", "from_node": "s7", "to_node": "c7", "max_capacity_mw": 60, "length_km": 6},
+    {"id": "l26", "from_node": "s5", "to_node": "c8", "max_capacity_mw": 70, "length_km": 5},
+    {"id": "l27", "from_node": "s8", "to_node": "c9", "max_capacity_mw": 55, "length_km": 5},
+    {"id": "l28", "from_node": "s8", "to_node": "c10", "max_capacity_mw": 55, "length_km": 5}
+  ]
+}
